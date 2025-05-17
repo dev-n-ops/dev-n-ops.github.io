@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MSTY ETF Guide – English</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold">YieldMax™ MSTR Option Income Strategy ETF (MSTY)</h1>
+      <p class="mt-2">Multilingual Analysis & Trading Guide – Published: 17 May 2025</p>
+      <nav class="mt-4 space-x-4">
+        <a href="index_en.html" class="underline">English</a>
+        <a href="index_pt.html" class="hover:underline">Português</a>
+        <a href="index_de.html" class="hover:underline">Deutsch</a>
+        <a href="index_it.html" class="hover:underline">Italiano</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8 space-y-12">
+    <!-- Executive Summary -->
+    <section id="exec-summary">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">Executive Summary</h2>
+      <p class="mt-4">MSTY is an actively managed ETF writing call options on MicroStrategy (MSTR) to generate high monthly income. It offers elevated yield but caps upside and retains full downside exposure to MSTR.</p>
+    </section>
+
+    <!-- Detailed Analysis -->
+    <section id="detailed-analysis">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">Detailed Analysis</h2>
+      <div class="mt-4 space-y-6">
+        <div>
+          <h3 class="text-xl font-medium">Fund Structure</h3>
+          <p class="mt-2">MSTY implements a synthetic covered‐call structure: it sells both standardized and FLEX call options on MSTR shares, collateralizing positions with cash and short‐duration U.S. Treasurys to meet margin requirements.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium">Risks & Fee Drag</h3>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li><strong>Directional Risk:</strong> Full downside exposure to MSTR price moves (and indirectly Bitcoin underpinnings).</li>
+            <li><strong>Strategy Risk:</strong> Option‐writing caps upside at the strike levels.</li>
+            <li><strong>Fee Drag:</strong> 0.99% expense ratio plus bid/ask spreads erode returns over time.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium">Distributions</h3>
+          <p class="mt-2">Monthly distributions derive primarily from option premiums. A significant portion often classifies as Return of Capital (ROC), which reduces cost basis and defers taxes.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium">Liquidity & Premium/Discount</h3>
+          <p class="mt-2">MSTY typically trades with a narrow bid/ask spread (~0.04% NAV) but can swing to premiums or discounts intraday, especially around volatility events.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison -->
+    <section id="comparison">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">Value‑Decay Comparison vs UVXY/SOXL</h2>
+      <p class="mt-4">Unlike UVXY or SOXL, MSTY has no daily leverage or futures‐roll mechanism, so it doesn’t suffer the structural decay those funds endure. Instead, returns track MSTR’s performance (capped by strike) plus collected premiums minus fees.</p>
+    </section>
+
+    <!-- Alternative ETFs -->
+    <section id="alternatives">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">Alternative ETFs</h2>
+      <div class="overflow-x-auto mt-4">
+        <table class="min-w-full bg-white border border-gray-200">
+          <thead class="bg-blue-100">
+            <tr class="text-left">
+              <th class="px-4 py-2">ETF</th>
+              <th class="px-4 py-2">Underlying</th>
+              <th class="px-4 py-2">Strategy</th>
+              <th class="px-4 py-2">Expense</th>
+              <th class="px-4 py-2">Yield*</th>
+              <th class="px-4 py-2">Key Risk</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="px-4 py-2">TSLY</td><td>Tesla</td><td>Call‐write</td><td>0.99%</td><td>≈78%</td><td>TSLA volatility</td></tr>
+            <tr class="bg-gray-50"><td class="px-4 py-2">APLY</td><td>Apple</td><td>Call‐write</td><td>0.99%</td><td>≈47%</td><td>Upside cap</td></tr>
+            <tr><td class="px-4 py-2">XYLD</td><td>S&amp;P 500</td><td>Covered‐call</td><td>0.60%</td><td>≈11%</td><td>Index drawdown</td></tr>
+            <tr class="bg-gray-50"><td class="px-4 py-2">JEPI</td><td>S&amp;P 500</td><td>ELNs + Divs</td><td>0.35%</td><td>≈9%</td><td>Issuer credit</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-2 text-sm italic">*Recent annualized distribution rate; subject to change.</p>
+    </section>
+  </main>
+
+  <footer class="bg-gray-100 py-4 text-center text-gray-600">
+    © 2025 MSTY Analysis. All rights reserved.
+  </footer>
+</body>
+</html>
