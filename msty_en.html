@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MSTY Report – English</title>
+  <title>MSTY ETF Report – English</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
 </head>
 <body class="bg-gray-50 text-gray-800">
+  <!-- Header + Nav -->
   <header class="bg-blue-900 text-white py-6">
     <div class="container mx-auto px-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">MSTY Option Income Strategy ETF</h1>
@@ -17,16 +18,20 @@
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="container mx-auto px-4 py-8 space-y-12">
+
     <!-- Executive Summary -->
     <section id="exec-summary">
       <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">Executive Summary</h2>
-      <p class="mt-4">The YieldMax™ MSTR Option Income Strategy ETF (MSTY) is an actively managed, single‑issuer ETF that seeks to generate high monthly income by writing (selling) call options on shares of MicroStrategy Incorporated (MSTR), while collateralizing positions with cash and U.S. Treasurys. Launched on February 21, 2024, MSTY has delivered exceptional total‑return performance since inception—its NAV is up over 300% cumulative (annualized 225.5%) versus the S&P 500 TR at +13.6%. However, this comes with capped upside, full downside exposure to MSTR, elevated fees, and complex tax treatments.</p>
+      <p class="mt-4">
+        The YieldMax™ MSTR Option Income Strategy ETF (MSTY) is an actively managed, single‑issuer ETF that seeks to generate high monthly income by writing (selling) call options on shares of MicroStrategy Incorporated (MSTR), while collateralizing positions with cash and U.S. Treasurys. Launched on February 21, 2024, MSTY has delivered exceptional total‑return performance since inception—its NAV is up over 300% cumulative (annualized 225.5%) versus the S&amp;P 500 TR at +13.6%. However, this comes with capped upside, full downside exposure to MSTR, elevated fees, and complex tax treatments.
+      </p>
     </section>
 
     <!-- 1. Fund Mechanics & Strategy -->
     <section id="fund-mechanics">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">1. Fund Mechanics & Strategy</h2>
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">1. Fund Mechanics &amp; Strategy</h2>
       <ul class="list-disc list-inside mt-4 space-y-2">
         <li><strong>Underlying Exposure:</strong> Indirect exposure to MSTR share price via a <em>synthetic covered‑call</em> strategy—MSTY writes both standardized and FLEX call options on MSTR, collecting premium while forgoing gains above the strike prices.</li>
         <li><strong>Collateralization:</strong> Premium‑backed by cash and short‑duration U.S. Treasurys to meet margin requirements and maintain liquidity.</li>
@@ -46,11 +51,26 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200">
-            <tr><td class="px-4 py-2 font-medium">Expense Ratio</td><td class="px-4 py-2">0.99% gross annual fee (net of any waivers).</td></tr>
-            <tr class="bg-gray-50"><td class="px-4 py-2 font-medium">Bid‑Ask Spread</td><td class="px-4 py-2">Median 30‑day spread of 0.04% NAV; use limit orders.</td></tr>
-            <tr><td class="px-4 py-2 font-medium">Premium/Discount Risk</td><td class="px-4 py-2">Currently trading at a +0.18% premium to NAV.</td></tr>
-            <tr class="bg-gray-50"><td class="px-4 py-2 font-medium">Margin Financing</td><td class="px-4 py-2">If purchased on margin, financing adds ~3–8% carry cost.</td></tr>
-            <tr><td class="px-4 py-2 font-medium">Creation/Redemption</td><td class="px-4 py-2">Institutional creation units incur nominal fees; retail negligible.</td></tr>
+            <tr>
+              <td class="px-4 py-2 font-medium">Expense Ratio</td>
+              <td class="px-4 py-2">0.99% gross annual fee (net of any waivers).</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 font-medium">Bid‑Ask Spread</td>
+              <td class="px-4 py-2">Median 30‑day spread ~0.04% NAV; use limit orders.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 font-medium">Premium/Discount Risk</td>
+              <td class="px-4 py-2">Currently trading at a ~+0.18% premium to NAV.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 font-medium">Margin Financing</td>
+              <td class="px-4 py-2">If purchased on margin, financing adds ~3–8% carry cost.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 font-medium">Creation/Redemption</td>
+              <td class="px-4 py-2">Institutional creation units incur nominal fees; retail negligible.</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -60,19 +80,95 @@
     <section id="distributions-yield">
       <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">3. Distributions &amp; Yield Profile</h2>
       <ul class="list-disc list-inside mt-4 space-y-2">
-        <li><strong>Distribution Rate:</strong> 136.04% annualized based on the May 15, 2025 distribution × 12 ÷ NAV.</li>
-        <li><strong>30‑Day SEC Yield:</strong> 1.00% (ex‑option premium).</li>
-        <li><strong>Monthly Payouts:</strong> May 2025 €2.3734; Apr 2025 €1.3356; Mar 2025 €1.3775; …</li>
-        <li><strong>Composition:</strong> Ordinary income, capital gains, and ROC (lowers NAV and cost basis).</li>
+        <li><strong>Distribution Rate:</strong> 136.04% annualized (May 15, 2025 distribution × 12 ÷ NAV).</li>
+        <li><strong>30‑Day SEC Yield:</strong> 1.00% (ex-option income).</li>
+        <li><strong>Monthly Payouts:</strong> May 2025: €2.3734; Apr 2025: €1.3356; Mar 2025: €1.3775; …</li>
+        <li><strong>Composition:</strong> Ordinary income, capital gains, and return of capital (ROC).</li>
       </ul>
     </section>
 
-    <!-- Further sections (4–9) follow the same format… -->
+    <!-- 4. Tax Considerations -->
+    <section id="tax">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">4. Tax Considerations</h2>
+      <ul class="list-disc list-inside mt-4 space-y-2">
+        <li>Option premium income taxed as ordinary income.</li>
+        <li>Return of Capital reduces cost basis and defers tax.</li>
+        <li>Distributions reported on Forms 1099‑B &amp; 1099‑DIV; watch wash‑sale rules.</li>
+      </ul>
+    </section>
 
+    <!-- 5. Performance & Risk Metrics -->
+    <section id="performance-risk">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">5. Performance &amp; Risk Metrics</h2>
+      <ul class="list-disc list-inside mt-4 space-y-2">
+        <li><strong>NAV Return since Inception (2/21/2024):</strong> +306.8% cumulative (+225.5% annualized).</li>
+        <li><strong>Market Price Return:</strong> +291.97% cumulative (+215.5% annualized).</li>
+        <li><strong>Volatility &amp; Beta:</strong> Very high—reflects MSTR’s leveraged Bitcoin exposure and option-writing variability.</li>
+        <li><strong>Drawdown Risk:</strong> Full downside exposure; option premiums provide limited cushion.</li>
+        <li><strong>Concentration:</strong> Single‑issuer risk tied to MSTR/Bitcoin dynamics.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Carry & Opportunity Cost Analysis -->
+    <section id="carry-opportunity">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">6. Carry &amp; Opportunity Cost Analysis</h2>
+      <ul class="list-disc list-inside mt-4 space-y-2">
+        <li><strong>Carry Cost:</strong> Expense ratio + any margin interest.</li>
+        <li><strong>Opportunity Cost:</strong> Upside above strikes accrues to option buyers, capping MSTY’s gains.</li>
+        <li><strong>Volatility Harvesting:</strong> High realized volatility boosts premiums; flat markets reduce income.</li>
+      </ul>
+    </section>
+
+    <!-- 7. Trading & Holding Strategies -->
+    <section id="trading-strategies">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">7. Trading &amp; Holding Strategies</h2>
+      <ol class="list-decimal list-inside mt-4 space-y-4">
+        <li>
+          <strong>Income‑Focused Buy‑and‑Hold</strong><br/>
+          Accumulate during elevated volatility, use limit orders, reinvest via DRIP (adjust for ROC).<br/>
+          <em>Risks:</em> Upside capped; steep declines erode principal.
+        </li>
+        <li>
+          <strong>Tactical Volatility Play</strong><br/>
+          Enter before known catalysts (Bitcoin halving, MSTR earnings), exit or hedge pre‑event, consider puts on MSTY/MSTR.
+        </li>
+        <li>
+          <strong>DIY Covered‑Call Replication</strong><br/>
+          Buy MSTR shares, write your own calls at chosen strikes/expirations; requires margin and strategy management.
+        </li>
+        <li>
+          <strong>Options on MSTY</strong><br/>
+          Buy MSTY puts for insurance; sell MSTY calls to enhance yield (monitor liquidity).
+        </li>
+        <li>
+          <strong>Leverage &amp; Margin</strong><br/>
+          Use margin to purchase extra MSTY shares; net yield ≈ distribution rate − margin rate; amplifies drawdowns.
+        </li>
+      </ol>
+    </section>
+
+    <!-- 8. Alternatives & Comparisons -->
+    <section id="alternatives">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">8. Alternatives &amp; Comparisons</h2>
+      <ul class="list-disc list-inside mt-4 space-y-2">
+        <li><strong>Direct MSTR Exposure:</strong> No income, full upside & downside.</li>
+        <li><strong>Other YieldMax ETFs:</strong> TSLY (TSLA), FBY (META), APLY (AAPL).</li>
+        <li><strong>Index Option Income:</strong> XYLD (S&amp;P 500 covered‑calls), JEPI (ELNs + dividends), PUTW (cash‑secured put writing).</li>
+      </ul>
+    </section>
+
+    <!-- 9. Suitability & Final Thoughts -->
+    <section id="suitability">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">9. Suitability &amp; Final Thoughts</h2>
+      <p class="mt-4">
+        MSTY is best suited for <strong>high‑risk, income‑oriented investors</strong> comfortable with capped upside and concentrated MSTR/Bitcoin exposure. Carefully balance yield objectives with principal risk, tax complexity, and strategy fees before allocating.
+      </p>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-gray-100 py-4 text-center text-gray-600">
-    © 2025 Stocks Reports
+    © 2025 Stocks Reports
   </footer>
 </body>
 </html>
