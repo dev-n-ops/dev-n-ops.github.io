@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
 </head>
 <body class="bg-gray-50 text-gray-800">
+
   <!-- Cabeçalho + Navegação -->
   <header class="bg-blue-900 text-white py-6">
     <div class="container mx-auto px-4 flex justify-between items-center">
@@ -21,11 +22,11 @@
   <!-- Conteúdo Principal -->
   <main class="container mx-auto px-4 py-8 space-y-12">
 
-    <!-- Resumo Executivo -->
+    <!-- Sumário Executivo -->
     <section id="resumo-executivo">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">Resumo Executivo</h2>
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">Sumário Executivo</h2>
       <p class="mt-4">
-        O YieldMax™ MSTR Option Income Strategy ETF (MSTY) é um ETF de gestão ativa, emissor único, que busca gerar alta renda mensal vendendo opções de compra sobre ações da MicroStrategy (MSTR), colateralizando posições com caixa e Treasurys dos EUA. Lançado em 21 de fevereiro de 2024, o MSTY entregou performance excepcional desde o início—seu NAV subiu mais de 300% acumulado (225,5% anualizado) contra +13,6% do S&amp;P 500 TR. Porém, isso ocorre com upside limitado, exposição total à queda de MSTR, taxas elevadas e tratamento fiscal complexo.
+        O YieldMax™ MSTR Option Income Strategy ETF (MSTY) é um ETF de gestão ativa e emissor único que busca gerar alta renda mensal vendendo opções de compra (calls) sobre ações da MicroStrategy Incorporated (MSTR), enquanto colateraliza as posições com caixa e títulos do Tesouro dos EUA. Lançado em 21 de fevereiro de 2024, o MSTY entregou performance total excepcional desde o início—seu NAV subiu mais de 300% acumulado (225,5% anualizado) contra +13,6% do S&P 500 TR. Porém, isso ocorre com upside limitado, exposição total à queda de MSTR, taxas elevadas e tratamento fiscal complexo.
       </p>
     </section>
 
@@ -33,9 +34,9 @@
     <section id="mecanica-estrategia">
       <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">1. Mecânica &amp; Estratégia</h2>
       <ul class="list-disc list-inside mt-4 space-y-2">
-        <li><strong>Exposição Subjacente:</strong> Calls sintéticos em MSTR—venda de calls padronizadas e FLEX, captando prêmios e limitando ganhos acima dos strikes.</li>
-        <li><strong>Colateralização:</strong> Caixa e Treasurys de curto prazo para requisitos de margem e liquidez.</li>
-        <li><strong>Geração de Renda:</strong> Distribuições mensais de prêmios de opções e ganhos de capital limitados.</li>
+        <li><strong>Exposição Subjacente:</strong> Exposição indireta ao preço de MSTR via estratégia sintética de covered‑call—MSTY vende calls padronizadas e FLEX sobre MSTR, captando prêmios e abrindo mão de ganhos acima dos strikes.</li>
+        <li><strong>Colateralização:</strong> Prêmios garantidos por caixa e Treasurys de curto prazo para atender margem e manter liquidez.</li>
+        <li><strong>Geração de Renda:</strong> Distribuições mensais financiadas principalmente por prêmios de opções; secundariamente, ganhos de capital de MSTR (limitados).</li>
       </ul>
     </section>
 
@@ -51,28 +52,121 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200">
-            <tr><td class="px-4 py-2 font-medium">Taxa de Administração</td><td class="px-4 py-2">0,99% ao ano (bruto).</td></tr>
-            <tr class="bg-gray-50"><td class="px-4 py-2 font-medium">Spread Bid‑Ask</td><td class="px-4 py-2">~0,04% do NAV; use ordens limitadas.</td></tr>
-            <tr><td class="px-4 py-2 font-medium">Prêmio/Desconto</td><td class="px-4 py-2">Em torno de +0,18% acima do NAV.</td></tr>
-            <tr class="bg-gray-50"><td class="px-4 py-2 font-medium">Financiamento em Margem</td><td class="px-4 py-2">Adiciona ~3–8% de custo, se aplicado.</td></tr>
-            <tr><td class="px-4 py-2 font-medium">Criação/Resgate</td><td class="px-4 py-2">Taxas institucionais nominais; varejo desprezível.</td></tr>
+            <tr>
+              <td class="px-4 py-2 font-medium">Taxa de Administração</td>
+              <td class="px-4 py-2">0,99% ao ano (bruto).</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 font-medium">Spread Bid‑Ask</td>
+              <td class="px-4 py-2">Média de ~0,04% do NAV; use ordens limitadas para minimizar slippage.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 font-medium">Prêmio/Desconto</td>
+              <td class="px-4 py-2">Recentemente negociado em +0,18% sobre o NAV.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 font-medium">Financiamento em Margem</td>
+              <td class="px-4 py-2">Se adquirido com margem, custos de financiamento de ~3–8% adicionais.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 font-medium">Criação/Resgate</td>
+              <td class="px-4 py-2">Unidades de criação institucionais têm taxas nominais; desprezível para varejo.</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- 3. Distribuições & Yield Profile -->
+    <!-- 3. Distribuições & Perfil de Rendimento -->
     <section id="distribuicoes-yield">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">3. Distribuições &amp; Yield Profile</h2>
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">3. Distribuições &amp; Perfil de Rendimento</h2>
       <ul class="list-disc list-inside mt-4 space-y-2">
-        <li><strong>Taxa de Distribuição:</strong> 136,04% anualizada (15/05/2025 × 12 ÷ NAV).</li>
+        <li><strong>Taxa de Distribuição:</strong> 136,04% anualizada com base no pagamento de 15/05/2025 × 12 ÷ NAV.</li>
         <li><strong>30‑Day SEC Yield:</strong> 1,00% (ex‑prêmios de opções).</li>
-        <li><strong>Pagamentos Mensais:</strong> Maio 2025 €2.3734; Abr 2025 €1.3356; Mar 2025 €1.3775; …</li>
-        <li><strong>Composição:</strong> Renda ordinária, ganhos de capital e ROC.</li>
+        <li><strong>Pagamentos Mensais:</strong> Maio 2025: €2.3734; Abr 2025: €1.3356; Mar 2025: €1.3775; …</li>
+        <li><strong>Composição:</strong> Renda ordinária (prêmios), ganhos de capital e Retorno de Capital (ROC), que reduz NAV e custo de aquisição.</li>
       </ul>
     </section>
 
-    <!-- 4–9: siga o mesmo padrão para conclui-las… -->
+    <!-- 4. Considerações Fiscais -->
+    <section id="tax">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">4. Considerações Fiscais</h2>
+      <ul class="list-disc list-inside mt-4 space-y-2">
+        <li><strong>Prêmios de Opções:</strong> Tributados como ganhos de capital de curto prazo, a alíquota de renda comum.</li>
+        <li><strong>Retorno de Capital:</strong> Não tributável na distribuição, mas reduz o custo de aquisição, aumentando ganhos de capital futuros.</li>
+        <li><strong>Dividendos Qualificados:</strong> Raros; a maioria das distribuições é não qualificada.</li>
+        <li><strong>Relatórios:</strong> Formulários 1099‑B e 1099‑DIV, com itens de ROC.</li>
+        <li><strong>Regras de Wash‑Sale:</strong> Aplicam‑se se vender ações com prejuízo e recomprar em até 30 dias.</li>
+      </ul>
+    </section>
+
+    <!-- 5. Performance & Métricas de Risco -->
+    <section id="performance-risk">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">5. Performance &amp; Métricas de Risco</h2>
+      <ul class="list-disc list-inside mt-4 space-y-2">
+        <li><strong>Desde a Inception (21/02/2024):</strong> NAV +306,8% acumulado (+225,5% anualizado).</li>
+        <li><strong>Retorno no Preço de Mercado:</strong> +291,97% acumulado (+215,5% anualizado).</li>
+        <li><strong>Volatilidade &amp; Beta:</strong> Muito alta—reflete exposição alavancada a Bitcoin e variabilidade das opções.</li>
+        <li><strong>Risco de Drawdown:</strong> Exposição total à queda de MSTR; prêmios oferecem amortecimento limitado.</li>
+        <li><strong>Concentração:</strong> Risco de emissor único, atrelado ao preço de Bitcoin e decisões estratégicas da MSTR.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Análise de Carry & Custo de Oportunidade -->
+    <section id="carry-opportunity">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">6. Análise de Carry &amp; Custo de Oportunidade</h2>
+      <ul class="list-disc list-inside mt-4 space-y-2">
+        <li><strong>Custo de Carry:</strong> Taxa de administração + possível juros de margem.</li>
+        <li><strong>Custo de Oportunidade:</strong> Upside acima dos strikes vai para os compradores de opções, limitando ganhos.</li>
+        <li><strong>Harvesting de Volatilidade:</strong> Alta volatilidade aumenta prêmios; mercados laterais reduzem renda.</li>
+      </ul>
+    </section>
+
+    <!-- 7. Estratégias de Trading & Holding -->
+    <section id="trading-strategies">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">7. Estratégias de Trading &amp; Holding</h2>
+      <ol class="list-decimal list-inside mt-4 space-y-4">
+        <li>
+          <strong>Buy‑and‑Hold Focado em Renda</strong><br/>
+          Acumule em períodos de alta volatilidade implícita, use ordens limitadas, reinvista via DRIP (cautela com ROC).<br/>
+          <em>Riscos:</em> Upside limitado; quedas acentuadas de MSTR corroem o capital.
+        </li>
+        <li>
+          <strong>Jogo Tático de Volatilidade</strong><br/>
+          Entre antes de catalisadores (halving de Bitcoin, resultados), saia ou faça hedge pré‑evento, considere puts em MSTY/MSTR.
+        </li>
+        <li>
+          <strong>DIY Covered‑Call Replication</strong><br/>
+          Compre ações da MSTR e escreva calls em strikes/expirações escolhidos; requer margem e gestão ativa.
+        </li>
+        <li>
+          <strong>Opções sobre MSTY</strong><br/>
+          Compre puts de MSTY para proteção; venda calls em MSTY para aumentar rendimento (monitore liquidez).
+        </li>
+        <li>
+          <strong>Alavancagem &amp; Margem</strong><br/>
+          Use margem para comprar mais MSTY; rendimento líquido ≈ distribuição − taxa de margem; amplifica perdas.
+        </li>
+      </ol>
+    </section>
+
+    <!-- 8. Alternativas & Comparações -->
+    <section id="alternatives">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">8. Alternativas &amp; Comparações</h2>
+      <ul class="list-disc list-inside mt-4 space-y-2">
+        <li><strong>Exposição Direta a MSTR:</strong> Sem renda, upside/deshoulder completa.</li>
+        <li><strong>Outros ETFs YieldMax:</strong> TSLY (TSLA), FBY (META), APLY (AAPL) para renda de calls únicas.</li>
+        <li><strong>Renda de Opções em Índices:</strong> XYLD (calls S&P 500), JEPI (ELNs + dividendos), PUTW (venda de puts garantida).</li>
+      </ul>
+    </section>
+
+    <!-- 9. Adequação & Reflexões Finais -->
+    <section id="suitability">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2">9. Adequação &amp; Reflexões Finais</h2>
+      <p class="mt-4">
+        MSTY é ideal para investidores de perfil <strong>alto risco e focados em renda</strong>, confortáveis com upside limitado e risco concentrado em MSTR/Bitcoin. Avalie cuidadosamente o equilíbrio entre objetivos de rendimento, riscos de principal e complexidade fiscal antes de alocar.
+      </p>
+    </section>
 
   </main>
 
